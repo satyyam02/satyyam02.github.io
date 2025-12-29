@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Inori (祈)</title>
+  <meta name="description" content="A living, cinematic portfolio blending 3D, motion, and narrative." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#07080b; --ink:#e9ecf1; --muted:#9aa3b2; --neon:#7cffd1; --vio:#8b7cff; --hot:#ff7a7a;
+      --glass: rgba(255,255,255,.08);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%;background:radial-gradient(1200px 800px at 70% -10%, #12142a 0%, #07080b 50%, #05060a 100%); color:var(--ink); font-family:Inter, system-ui}
+    canvas{position:fixed; inset:0; z-index:0}
+    .ui{position:relative; z-index:2}
+    header{position:fixed; top:0; left:0; right:0; display:flex; gap:16px; align-items:center; padding:14px 22px; backdrop-filter: blur(10px); background:linear-gradient(180deg, rgba(10,12,22,.7), rgba(10,12,22,.3)); border-bottom:1px solid rgba(255,255,255,.08)}
+    header .brand{font-family:Orbitron; letter-spacing:.12em; font-weight:700}
+    header nav{margin-left:auto; display:flex; gap:18px}
+    header a{color:var(--muted); text-decoration:none; font-weight:600}
+    header a:hover{color:var(--neon)}
+    section{min-height:100vh; padding:120px 8vw 80px; display:grid; align-content:center}
+    .hero{gap:28px}
+    .kicker{color:var(--neon); letter-spacing:.22em; text-transform:uppercase; font-size:12px}
+    h1{font-size:clamp(38px, 6vw, 86px); line-height:1.02; margin:0}
+    .grad{background:linear-gradient(90deg, var(--neon), var(--vio)); -webkit-background-clip:text; background-clip:text; color:transparent}
+    .lead{max-width:760px; color:var(--muted); font-size:clamp(16px, 2vw, 20px)}
+    .cta{display:flex; gap:14px; flex-wrap:wrap}
+    .btn{padding:12px 18px; border-radius:14px; border:1px solid rgba(255,255,255,.18); background:linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,.02)); color:var(--ink); text-decoration:none; font-weight:700}
+    .btn.primary{background:linear-gradient(135deg, rgba(124,255,209,.35), rgba(139,124,255,.35)); border-color:transparent}
+    .glass{background:linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.14); border-radius:22px; padding:26px}
+    .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:22px}
+    .card h3{margin:0 0 8px}
+    .tag{display:inline-block; padding:6px 10px; border-radius:999px; background:rgba(124,255,209,.15); color:var(--neon); font-weight:700; font-size:12px}
+    .timeline{display:grid; gap:18px}
+    .line{display:grid; grid-template-columns:120px 1fr; gap:18px}
+    .year{font-family:Orbitron; color:var(--vio)}
+    footer{padding:60px 8vw; color:var(--muted)}
+    .float{animation:float 6s ease-in-out infinite}
+    @keyframes float{50%{transform:translateY(-10px)}}
+  </style>
+</head>
+<body>
+  <canvas id="bg"></canvas>
+  <div class="ui">
+    <header>
+      <div class="brand">Inori (祈)</div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#craft">Craft</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero" id="home">
+      <div class="kicker">NOT JUST A PORTFOLIO</div>
+      <h1><span class="grad">Architect of Digital Realities</span><br/>SATYAM SINGH CHAUHAN</h1>
+      <p class="lead">Professional web developer & designer, ethical hacker and red team leader, cinematic video editor and football striker. I create systems that look alive, feel secure, and move with purpose.</p>
+      <div class="cta">
+        <a class="btn primary" href="#work">Explore the system...</a>
+        <a class="btn" href="https://sjs1.onrender.com" target="_blank">Inori (祈) CTF</a>
+        <a class="btn" href="https://arise02.onrender.com" target="_blank">ARISE Chat</a>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="grid">
+        <div class="glass">
+          <h2 class="grad">About</h2>
+          <p class="lead">Anime fuels pattern recognition. Chess sharpens direction. PvP games refine reflex. Football builds instinct. Guitar finds rhythm. All converge into creative, patient, precise execution.</p>
+        </div>
+        <div class="glass float">
+          <span class="tag">Mindset</span>
+          <div class="timeline">
+            <div class="line"><div class="year">Design</div><div>Premium UI/UX, motion, micro‑interactions, brand systems.</div></div>
+            <div class="line"><div class="year">Security</div><div>Bug bounty, pentesting, red team ops, secure-by-design.</div></div>
+            <div class="line"><div class="year">Cinematic</div><div>Story-driven edits, lighting, composition.</div></div>
+            <div class="line"><div class="year">Sport</div><div>Striker mentality: positioning, timing, finish.</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="craft">
+      <div class="glass">
+        <h2 class="grad">Craft & Stack</h2>
+        <div class="grid">
+          <div class="card glass"><h3>Living UI</h3><p>Three.js, WebGL, GSAP, shader motion, scroll narratives.</p></div>
+          <div class="card glass"><h3>Secure Systems</h3><p>Threat modeling, audits, exploit research, CTF design.</p></div>
+          <div class="card glass"><h3>Performance</h3><p>90+ FPS targets, LCP/CLS tuning, asset streaming.</p></div>
+          <div class="card glass"><h3>Story</h3><p>Cinematics, pacing, sound cues, reveal moments.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="grid">
+        <div class="glass"><h2 class="grad">Selected Work</h2><p class="lead">Surprises at every layer—hover, scroll, depth.</p></div>
+        <div class="glass"><h3>Elite CTF Challenge</h3><p>Original challenges, real-world attack chains.</p></div>
+        <div class="glass"><h3>ARISE Public Chat</h3><p>Privacy-first, zero retention philosophy.</p></div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="glass">
+        <h2 class="grad">Contact</h2>
+        <p class="lead">Let’s build something alive.</p>
+        <a class="btn primary" href="mailto:satyam.2singh.0@gmail.com">hello@elite.dev</a>
+      </div>
+    </section>
+
+    <center><footer>© Inori (祈) — Wanna Yours ?</footer></center>
+  </div>
+
+  <!-- Libraries -->
+  <script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script>
+    // Three.js ethereal field
+    const canvas = document.getElementById('bg');
+    const renderer = new THREE.WebGLRenderer({canvas, antialias:true, alpha:true});
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(60, innerWidth/innerHeight, .1, 100);
+    camera.position.z = 6;
+    renderer.setPixelRatio(devicePixelRatio);
+    renderer.setSize(innerWidth, innerHeight);
+
+    const geo = new THREE.IcosahedronGeometry(1.6, 2);
+    const mat = new THREE.MeshStandardMaterial({color:0x7cffd1, roughness:.25, metalness:.6, wireframe:true});
+    const orb = new THREE.Mesh(geo, mat);
+    scene.add(orb);
+    const light1 = new THREE.PointLight(0x8b7cff, 1.4); light1.position.set(3,2,4); scene.add(light1);
+    const light2 = new THREE.PointLight(0x7cffd1, 1.2); light2.position.set(-3,-2,4); scene.add(light2);
+
+    function resize(){camera.aspect=innerWidth/innerHeight; camera.updateProjectionMatrix(); renderer.setSize(innerWidth, innerHeight)}
+    addEventListener('resize', resize);
+
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.to(orb.rotation, {y:Math.PI*2, x:Math.PI, duration:20, repeat:-1, ease:'none'});
+    gsap.to(orb.position, {z:4, scrollTrigger:{scrub:1}});
+
+    function tick(){orb.rotation.y+=.002; renderer.render(scene,camera); requestAnimationFrame(tick)}
+    tick();
+  </script>
+</body>
+</html>
+
